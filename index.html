@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Your Time Into Real Impact | charity: water</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span {
+            color: #FFC629;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC629;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFC629 0%, #FFB800 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Impact Section */
+        .impact-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .impact-image {
+            width: 100%;
+            height: 400px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+            background-image: url('https://via.placeholder.com/600x400/e0e0e0/666?text=Girl+Studying');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .impact-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .impact-text p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background-color: #f8f8f8;
+            padding: 60px 20px;
+        }
+
+        .stats-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-box {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #FFC629;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Ways to Help Section */
+        .ways-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .ways-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .ways-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .way-card {
+            background-color: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .way-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .way-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .way-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .way-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Image Gallery Section */
+        .gallery-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 300px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            background-image: url('https://via.placeholder.com/600x300/e0e0e0/666?text=Water+Impact');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background-color: #333;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button-light {
+            display: inline-block;
+            background-color: #FFC629;
+            color: #333;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,198,41,0.5);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .impact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-content {
+                grid-template-columns: 1fr;
+            }
+
+            .ways-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">charity<span>:</span> water</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#impact">Impact</a>
+                <a href="#get-involved">Get Involved</a>
+                <a href="#donate">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Turn Your Time and Actions Into Real Impact!</h1>
+            <p>Join a global movement where your voice and contributions become the driving action—give your support to clean water sustainability, reduce social inequalities, and empower marginalized communities through collaboration and community-driven impact.</p>
+            <a href="#get-involved" class="cta-button">Start Making a Difference</a>
+        </div>
+    </section>
+
+    <section class="impact-section" id="about">
+        <div class="impact-image"></div>
+        <div class="impact-text">
+            <h2>Education Starts With Access to Clean Water</h2>
+            <p>When children—especially girls—don't have to spend hours each day collecting water, they can go to school. They can study. They can dream.</p>
+            <p>Your contribution doesn't just provide water; it creates opportunities for education, health, and a brighter future for entire communities.</p>
+            <p><strong>Together, we transform awareness into action.</strong></p>
+        </div>
+    </section>
+
+    <section class="stats-section" id="impact">
+        <div class="stats-content">
+            <div class="stat-box">
+                <div class="stat-number">1 in 10</div>
+                <div class="stat-label">People lack access to clean water</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">785M</div>
+                <div class="stat-label">People worldwide without clean water</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Of donations go directly to water projects</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ways-section" id="get-involved">
+        <h2>How You Can Get Involved</h2>
+        <div class="ways-grid">
+            <div class="way-card">
+                <div class="way-icon">💧</div>
+                <h3>Start a Campaign</h3>
+                <p>Rally your friends, classmates, or community to fundraise for clean water projects.</p>
+            </div>
+            <div class="way-card">
+                <div class="way-icon">🗣️</div>
+                <h3>Spread Awareness</h3>
+                <p>Use your voice on social media to educate others about the global water crisis.</p>
+            </div>
+            <div class="way-card">
+                <div class="way-icon">🤝</div>
+                <h3>Volunteer</h3>
+                <p>Join our community initiatives and collaborate on sustainability efforts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>Be the Change You Want to See</h2>
+        <p>Every action counts. Every contribution matters. Join thousands of activist students who are already making waves in the fight for clean water access worldwide.</p>
+        <a href="#donate" class="cta-button-light">Join the Movement Today</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#projects">Our Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <p>&copy; 2025 charity: water. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
